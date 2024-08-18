@@ -17,3 +17,33 @@ In summary, this ended up as an exercise to achieve:
 **TOP 10 Customers**
 
 ![alt text](<images/Pasted image 20240818171843.png>)
+
+## How to Run the Project
+To run this project locally, follow these steps:
+### 1. Clone the Repository
+First, clone the repository to your local machine:
+```
+git clone https://github.com/A-Quaglia/pandas_pvt_table_n_postgres.git
+cd pandas_pvt_table_n_postgres
+```
+
+### 2. Install Project Dependencies
+If you haven't already installed Poetry, you can do so by following the instructions on the [official Poetry website](https://python-poetry.org/docs/#installation).
+Once Poetry is installed, use it to install the project's dependencies:
+```
+poetry install
+```
+
+### 3. Configure Database Connection
+Ensure that your local PostgreSQL database is set up and the [Northwind database is configured](https://github.com/pthom/northwind_psql). You should update the connection settings in the .env file with your database credentials - first delete `.template` from the file extension.
+
+### 4. Run the Jupyter Notebook
+To run the Jupyter Notebook and execute the analysis:
+```
+poetry shell
+```
+Start Jupyter Notebook:
+```
+jupyter notebook
+```
+Open and run the `northwind_analysis.ipynb` notebook to reproduce the study and results.
