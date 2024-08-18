@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "pandas-pvt-table-n-postgres"
+version = "0.1.0"
+description = ""
+authors = ["Quaglia"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+python-dotenv = "^1.0.1"
+pandas = "^2.2.2"
+psycopg2 = "^2.9.9"
+taskipy = "^1.13.0"
+isort = "^5.13.2"
+black = "^24.8.0"
+jupyter = "^1.0.0"
+sqlalchemy = "^2.0.32"
+matplotlib = "^3.9.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.task]
+tests = "poetry run pytest -v tests/"
+format = """
+isort .
+black .
+"""
